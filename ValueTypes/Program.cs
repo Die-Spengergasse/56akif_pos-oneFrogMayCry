@@ -94,7 +94,7 @@ namespace ValueTypes
             Console.WriteLine("BerechneSchuelerProKlasse(100, 6): " + typeExercise.BerechneSchuelerProKlasse(100, 6));
             Console.WriteLine("BerechneAchtel(120):               " + typeExercise.BerechneAchtel(120));
             //Console.WriteLine("BerechneAchtel(9223372036854775807):               " + typeExercise.BerechneAchtel(922337203685477580));
-
+            Console.ReadLine();
         }
     }
 }
