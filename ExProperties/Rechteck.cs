@@ -8,34 +8,37 @@ namespace ExProperties.App
         {
             get
             {
-                return laenge;
+                return _laenge;
             }
             set
             {
-                laenge = (value >= 0 ? value : throw new ArgumentException("Ungültige Länge!"));
+                _laenge = (value >= 0 ? value : throw new ArgumentException("Ungültige Länge!"));
             }
         }
-        private int laenge;
+        private int _laenge;
 
         public int Breite
         {
             get
             {
-                return breite;
+                return _breite;
             }
             set
             {
-                breite = (value >= 0 ? value : throw new ArgumentException("Ungültige Länge!"));
+                _breite = (value >= 0 ? value : throw new ArgumentException("Ungültige Länge!"));
             }
         }
-        private int breite;
+        private int _breite;
 
         public int Flaeche
         {
             get
             {
-                return Laenge * Breite;
+                //direkt das backing-field verwenden
+                return _laenge * _breite;
             }
         }
+        // this exists
+        // public int Flaeche => return _laenge * _breite;
     }
 }
