@@ -20,6 +20,6 @@ namespace Spg.Ganymed.Domain.Model
 
         public Warehouse WarehouseNavigator { get; set; } = default!;
 
-        public List<Entries> EquipmentEntries { get; set; } = new();
+        public List<CartEntry> EquipmentCartEntries { get; set; } = new();
     }
 }

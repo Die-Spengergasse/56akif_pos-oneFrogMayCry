@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Spg.Ganymed.Domain.Model
 {
-    public class Entries
+    public class CartEntry
     {
         public Location LocationNavigation { get; set; } = default!;
-
-        public User UserNavigation { get; set; } = default!;
 
         public Equipment EquipmentNavigation { get; set; } = default!;
 

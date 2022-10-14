@@ -14,6 +14,6 @@ namespace Spg.Ganymed.Domain.Model
 
         public User UserNavigation { get; set; } = default!;
 
-        public List<Equipment> CartEquipment { get; set; } = new();
+        public List<CartEntry> CartEntries { get; set; } = new();
     }
 }

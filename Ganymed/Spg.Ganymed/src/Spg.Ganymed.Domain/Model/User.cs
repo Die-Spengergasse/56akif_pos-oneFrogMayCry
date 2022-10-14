@@ -24,6 +24,6 @@ namespace Spg.Ganymed.Domain.Model
 
         public DateTime RegistrationDateTime { get; init; }
 
-        public List<Cart> Carts { get; set; } = new();
+        public List<Cart> UserCarts { get; set; } = new();
     }
 }
