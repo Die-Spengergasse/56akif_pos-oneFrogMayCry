@@ -22,6 +22,8 @@ namespace Spg.Ganymed.Domain.Model
 
         public string EMail { get; set; } = string.Empty;
 
+        public string PwdHash { get; set; } = string.Empty;
+
         public DateTime RegistrationDateTime { get; init; }
 
         public List<Cart> UserCarts { get; set; } = new();

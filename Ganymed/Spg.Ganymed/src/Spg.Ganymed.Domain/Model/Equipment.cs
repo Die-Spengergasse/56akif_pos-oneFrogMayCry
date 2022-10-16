@@ -14,11 +14,11 @@ namespace Spg.Ganymed.Domain.Model
 
         public string Description { get; set; } = string.Empty;
 
-        public string Type { get; set; } = string.Empty;
-
         public bool Available { get; set; }
 
-        public Warehouse WarehouseNavigator { get; set; } = default!;
+        public EquipmentType EquipmentTypeNavigator { get; set; } = default!;
+
+        public WarehousePosition WarehousePositionNavigator { get; set; } = default!;
 
         public List<CartEntry> EquipmentCartEntries { get; set; } = new();
     }
