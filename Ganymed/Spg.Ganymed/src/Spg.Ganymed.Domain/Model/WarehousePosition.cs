@@ -18,6 +18,6 @@ namespace Spg.Ganymed.Domain.Model
 
         public Location LocationNavigation { get; set; } = default!;
 
-        public List<Equipment> EquipmentInWarehousePosition { get; set; }
+        public List<Equipment> EquipmentInWarehousePosition { get; set; } = new();
     }
 }

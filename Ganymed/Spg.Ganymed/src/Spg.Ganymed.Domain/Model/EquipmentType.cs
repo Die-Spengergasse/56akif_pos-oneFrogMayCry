@@ -10,6 +10,6 @@ namespace Spg.Ganymed.Domain.Model
     {
         public string Type { get; set; } = string.Empty;
 
-        public List<Equipment> EquipmentOfType { get; set; }
+        public List<Equipment> EquipmentOfType { get; set; } = new();
     }
 }
