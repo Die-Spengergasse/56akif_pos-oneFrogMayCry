@@ -16,7 +16,7 @@ namespace Spg.Ganymed.Domain.Model
 
         public string Compartment { get; set; } = string.Empty;
 
-        public Location LocationNavigation { get; set; } = default!;
+        public Warehouse WarehouseNavigation { get; set; } = default!;
 
         public List<Equipment> EquipmentInWarehousePosition { get; set; } = new();
     }

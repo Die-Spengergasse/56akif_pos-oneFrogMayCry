@@ -16,10 +16,14 @@ namespace Spg.Ganymed.Domain.Model
 
         public bool Available { get; set; }
 
-        public EquipmentType EquipmentTypeNavigator { get; set; } = default!;
+        public Happening HappeningNavigation { get; set; } = default!;
 
-        public WarehousePosition WarehousePositionNavigator { get; set; } = default!;
+        public HappeningLocation HappeningLocationNavigation { get; set; } = default!;
 
-        public List<CartEntry> EquipmentCartEntries { get; set; } = new();
+        public EquipmentType EquipmentTypeNavigation { get; set; } = default!;
+
+        public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
+
+        public List<CartEntry> EquipmentInCartEntries { get; set; } = new();
     }
 }
