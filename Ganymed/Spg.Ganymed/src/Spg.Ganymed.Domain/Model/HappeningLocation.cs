@@ -14,6 +14,6 @@ namespace Spg.Ganymed.Domain.Model
 
         public List<Equipment> HappeningLocationEquipment { get; set; } = new();
 
-        public Happening HappeningNavigation { get; set; } = default!;
+        public List<Happening> HappeningsinLocation { get; set; } = default!;
     }
 }
