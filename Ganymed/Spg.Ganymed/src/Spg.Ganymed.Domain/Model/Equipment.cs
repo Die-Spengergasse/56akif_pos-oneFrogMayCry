@@ -16,9 +16,9 @@ namespace Spg.Ganymed.Domain.Model
 
         public bool Available { get; set; }
 
-        public Happening HappeningNavigation { get; set; } = default!;
+        //public Happening CurrentHappeningNavigation { get; set; } = default!;
 
-        public HappeningLocation HappeningLocationNavigation { get; set; } = default!;
+        public HappeningLocation CurrentHappeningLocationNavigation { get; set; } = default!;
 
         public EquipmentType EquipmentTypeNavigation { get; set; } = default!;
 

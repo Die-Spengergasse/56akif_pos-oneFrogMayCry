@@ -8,7 +8,7 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class Happening
     {
-        public List<Equipment> HappeningEquipment { get; set; } = new();
+        //public List<Equipment> HappeningEquipment { get; set; } = new();
 
         public List<HappeningLocation> HappeningLocations { get; set; } = new();
 
