@@ -28,7 +28,7 @@ namespace ExCollection.App
             s.ChangeKlasse(this);
         }
 
-        public void removeSchueler(Schueler s)
+        public void RemoveSchueler(Schueler s)
         {
             Schuelers.Remove(s);
         }
