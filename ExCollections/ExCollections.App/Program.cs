@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace ExCollection.App
 {
-    class Klasse
+    public class Klasse
     {
         // TODO: Erstelle ein Property Schuelers, welches alle Schüler der Klasse in einer
         //       Liste speichert.
@@ -33,7 +33,7 @@ namespace ExCollection.App
             Schuelers.Remove(s);
         }
     }
-    class Schueler
+    public class Schueler
     {
         // TODO: Erstelle ein Proeprty KlasseNavigation vom Typ Klasse, welches auf
         //       die Klasse des Schülers zeigt.
@@ -61,7 +61,7 @@ namespace ExCollection.App
             if(KlasseNavigation != null)
             {
                 //KlasseNavigation.Schuelers.remove(this);
-                KlasseNavigation.removeSchueler(this);
+                KlasseNavigation.RemoveSchueler(this);
             }
             k.AddSchueler(this);
             KlasseNavigation = k;
