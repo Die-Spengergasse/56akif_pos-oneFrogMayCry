@@ -10,8 +10,8 @@ namespace ExCollection.App
         // TODO: Erstelle ein Property Schuelers, welches alle Schüler der Klasse in einer
         //       Liste speichert.
         public List<Schueler> Schuelers { get; set; } = new();
-        public string Name { get; set; }
-        public string KV { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string KV { get; set; } = string.Empty;
         /// <summary>
         /// Fügt den Schüler zur Liste hinzu und setzt das Property KlasseNavigation
         /// des Schülers korrekt auf die aktuelle Instanz.
@@ -43,8 +43,8 @@ namespace ExCollection.App
         [Newtonsoft.Json.JsonIgnore]
         public Klasse KlasseNavigation { get; set; } = default!;
         public int Id { get; set; }
-        public string Zuname { get; set; }
-        public string Vorname { get; set; }
+        public string Zuname { get; set; } = string.Empty;
+        public string Vorname { get; set; } = string.Empty;
         /// <summary>
         /// Ändert die Klassenzugehörigkeit, indem der Schüler
         /// aus der alten Klasse, die in KlasseNavigation gespeichert ist, entfernt wird.
