@@ -17,7 +17,7 @@ namespace Spg.PluePos._01.Model
             set 
             { 
                 if (value < 1 || value > 5) 
-                    throw new ArgumentOutOfRangeException(paramName: "Rating", message: "Range muss zwischen 1 und 5 liegen!");
+                    throw new ArgumentOutOfRangeException("Range muss zwischen 1 und 5 liegen!");
                 _rating = value; 
             }
         }
@@ -29,7 +29,7 @@ namespace Spg.PluePos._01.Model
         public Post(string title, DateTime created) 
         { 
             if(title is null)
-                throw new ArgumentNullException(paramName: "Titel",message: "Titel war NULL!");
+                throw new ArgumentNullException("Titel war NULL!");
             Title= title;
             Created = created;
         }

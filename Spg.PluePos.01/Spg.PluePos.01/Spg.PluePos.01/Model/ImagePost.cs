@@ -14,7 +14,7 @@ namespace Spg.PluePos._01.Model
             get 
             { 
                 if(Url is null)
-                    throw new ArgumentNullException(paramName: "Html", message: "Url war NULL!");
+                    throw new ArgumentNullException("Url war NULL!");
                 return $"<h1>{Title}</h1><img src={Url} />";
             }
         }

@@ -15,7 +15,7 @@ namespace Spg.PluePos._01.Model
             get 
             {
                 if (Content is null)
-                    throw new ArgumentNullException(paramName: "Html", message: "Content war NULL!");
+                    throw new ArgumentNullException("Content war NULL!");
                 return $"<h1>{Title}</h1><p>{Content}</p>";
             }
         }
