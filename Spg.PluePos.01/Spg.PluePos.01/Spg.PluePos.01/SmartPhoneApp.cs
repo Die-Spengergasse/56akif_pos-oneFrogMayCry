@@ -33,6 +33,7 @@ namespace Spg.PluePos._01
             foreach(Post post in this) 
             {
                 sb.Append(post.ToString());
+                sb.Append("/n");
             }
             return sb.ToString();
         }

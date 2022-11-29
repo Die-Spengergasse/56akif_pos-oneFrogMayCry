@@ -8,6 +8,7 @@ namespace Spg.PluePos._01.Model
 {
     public class ImagePost : Post
     {
+        //public string? Url { get; set; }
         public string Url { get; set; } = default!;
         public override string Html 
         {
@@ -19,8 +20,12 @@ namespace Spg.PluePos._01.Model
             }
         }
 
-        public ImagePost(string title) : base (title) { }
+        public ImagePost(string title) 
+            : base (title) 
+        { }
 
-        public ImagePost(string title, DateTime created) : base (title, created) { }
+        public ImagePost(string title, DateTime created) 
+            : base (title, created) 
+        { }
     }
 }

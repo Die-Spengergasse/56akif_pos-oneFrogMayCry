@@ -8,7 +8,9 @@ namespace Spg.PluePos._01.Model
 {
     public class TextPost : Post
     {
+        //public string? Content { get; set; }
         public string Content { get; set; } = default!;
+        //public int Length => Content?.Length ?? 0;
         public int Length { get => Content?.Length ?? 0; }
         public override string Html 
         {
@@ -20,8 +22,12 @@ namespace Spg.PluePos._01.Model
             }
         }
 
-        public TextPost(string title) : base(title) { }
+        public TextPost(string title) 
+            : base(title) 
+        { }
 
-        public TextPost(string title, DateTime created) : base(title, created) { }
+        public TextPost(string title, DateTime created) 
+            : base(title, created) 
+        { }
     }
 }

@@ -24,7 +24,6 @@ namespace Spg.PluePos._01.Model
         private int _rating;
 
         public abstract string Html { get; }
-        //TODO
         public SmartPhoneApp SmartPhone { get; set; } = default!;
         public Post(string title, DateTime created) 
         { 
@@ -34,7 +33,10 @@ namespace Spg.PluePos._01.Model
             Created = created;
         }
 
-        public Post(string title) : this(title, DateTime.Now) { }
+        //DateTime.UtcNow
+        public Post(string title) 
+            : this(title, DateTime.Now)
+        { }
 
         public override string ToString()
         {
