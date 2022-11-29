@@ -7,12 +7,14 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace LambdaUebung
 {
+    /*
     public delegate decimal ConverterHandler(decimal value);
     public delegate void ActionHandler(decimal value);
     public delegate decimal OperationHandler(decimal a, decimal b);
     public delegate void LogHandler(string message);
     public delegate void CommandHandler();
     public delegate bool FilterHandler(decimal value);
+    */
 
     public class LambdaTest
     {
@@ -22,7 +24,7 @@ namespace LambdaUebung
         /// <param name="values">Wertearray</param>
         /// <param name="converterFunc">Funktion, die den Wert konvertiert</param>
         /// <returns>Array mit den konvertierten Werten.</returns>
-        public static decimal[] Converter(decimal[] values, ConverterHandler converterFunc)
+        public static decimal[] Converter(decimal[] values, Func<decimal,decimal> converterFunc)
         {
             if (values == null) { return new decimal[0]; }
 
@@ -40,7 +42,7 @@ namespace LambdaUebung
         /// </summary>
         /// <param name="values">Wertearray</param>
         /// <param name="action">Funktion, die ausgeführt wird.</param>
-        public static void ForEach(decimal[] values, ActionHandler action)
+        public static void ForEach(decimal[] values, Action<decimal> action)
         {
             foreach (decimal value in values)
             {
@@ -55,7 +57,7 @@ namespace LambdaUebung
         /// <param name="y">2. Zahl</param>
         /// <param name="operation">Funktion mit der arithmetischen Operation</param>
         /// <returns></returns>
-        public static decimal ArithmeticOperation(decimal x, decimal y, OperationHandler operation)
+        public static decimal ArithmeticOperation(decimal x, decimal y, Func<decimal, decimal, decimal> operation)
         {
             return operation(x, y);
         }
@@ -70,8 +72,8 @@ namespace LambdaUebung
         /// <param name="logFunction">Funktion, die die Fehlermeldung weiterverarbeitet.</param>
         /// <returns></returns>
         public static decimal ArithmeticOperation(decimal x, decimal y,
-            OperationHandler operation,
-            LogHandler logFunction)
+            Func<decimal, decimal, decimal> operation,
+            Action<string> logFunction)
         {
             try
             {
@@ -89,7 +91,7 @@ namespace LambdaUebung
         /// Ruft die übergebene Funktion auf.
         /// </summary>
         /// <param name="command">Die Funktion, die aufgerufen werden soll.</param>
-        public static void RunCommand(CommandHandler command)
+        public static void RunCommand(Action command)
         {
             command();
         }
@@ -100,7 +102,7 @@ namespace LambdaUebung
         /// <param name="values">Array von Werten.</param>
         /// <param name="filterFunction">Filterfunktion</param>
         /// <returns></returns>
-        public static decimal[] Filter(decimal[] values, FilterHandler filterFunction)
+        public static decimal[] Filter(decimal[] values, Func<decimal, bool> filterFunction)
         {
             List<decimal> result = new List<decimal>();
             foreach (decimal value in values)
