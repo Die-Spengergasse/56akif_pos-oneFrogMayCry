@@ -26,6 +26,22 @@ namespace Spg.Ganymed.Domain.Model
 
         public DateTime RegistrationDateTime { get; init; }
 
-        public List<Cart> UserCarts { get; set; } = new();
+       // public List<Cart> UserCarts { get; set; } = new();     <---- not save
+        public List<Cart> _userCarts = new();
+
+        public IReadOnlyList<Cart> UserCarts => _userCarts;    //<---- more save
+
+        public User(int iD, Genders myProperty, string firstName, string lastName, string username, string eMail, string pwdHash, DateTime registrationDateTime, List<Cart> userCarts)
+        {
+            ID = iD;
+            MyProperty = myProperty;
+            FirstName = firstName;
+            LastName = lastName;
+            Username = username;
+            EMail = eMail;
+            PwdHash = pwdHash;
+            RegistrationDateTime = registrationDateTime;
+            _userCarts = userCarts;
+        }
     }
 }

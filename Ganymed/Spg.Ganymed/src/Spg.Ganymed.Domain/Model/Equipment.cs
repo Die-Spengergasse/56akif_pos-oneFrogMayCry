@@ -24,6 +24,19 @@ namespace Spg.Ganymed.Domain.Model
 
         public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
 
-        public List<CartEntry> EquipmentInCartEntries { get; set; } = new();
+        public List<CartEntry> _equipmentInCartEntries = new();
+        public IReadOnlyList<CartEntry> EquipmentInCartEntries => _equipmentInCartEntries;
+
+        public Equipment(int iD, string name, string description, bool available, HappeningLocation currentHappeningLocationNavigation, EquipmentType equipmentTypeNavigation, WarehousePosition warehousePositionNavigation, List<CartEntry> equipmentInCartEntries)
+        {
+            ID = iD;
+            Name = name;
+            Description = description;
+            Available = available;
+            CurrentHappeningLocationNavigation = currentHappeningLocationNavigation;
+            EquipmentTypeNavigation = equipmentTypeNavigation;
+            WarehousePositionNavigation = warehousePositionNavigation;
+            _equipmentInCartEntries = equipmentInCartEntries;
+        }
     }
 }

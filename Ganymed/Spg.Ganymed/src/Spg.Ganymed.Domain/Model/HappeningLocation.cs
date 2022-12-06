@@ -12,8 +12,19 @@ namespace Spg.Ganymed.Domain.Model
 
         public string Address { get; set; } = string.Empty;
 
-        public List<Equipment> HappeningLocationEquipment { get; set; } = new();
+        public List<Equipment> _happeningLocationEquipment = new();
+        public IReadOnlyList<Equipment> HappeningLocationEquipment => _happeningLocationEquipment;
 
-        public List<Happening> HappeningsinLocation { get; set; } = new();
+        public List<Happening> _happeningsInLocation = new();
+
+        public HappeningLocation(string iD, string address, List<Equipment> happeningLocationEquipment, List<Happening> happeningsInLocation)
+        {
+            ID = iD;
+            Address = address;
+            _happeningLocationEquipment = happeningLocationEquipment;
+            _happeningsInLocation = happeningsInLocation;
+        }
+
+        public IReadOnlyList<Happening> HappeningsInLocation => _happeningsInLocation;
     }
 }

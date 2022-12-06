@@ -14,5 +14,11 @@ namespace Spg.Ganymed.Domain.Model
         // public Equipment EquipmentNavigation { get; set; } = default!;
 
         public Cart CartNavigation { get; set; } = default!;
+
+        public CartEntry(Happening happeningNavigation, Cart cartNavigation)
+        {
+            HappeningNavigation = happeningNavigation;
+            CartNavigation = cartNavigation;
+        }
     }
 }

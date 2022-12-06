@@ -18,6 +18,17 @@ namespace Spg.Ganymed.Domain.Model
 
         public Warehouse WarehouseNavigation { get; set; } = default!;
 
-        public List<Equipment> EquipmentInWarehousePosition { get; set; } = new();
+        public List<Equipment> _equipmentInWarehousePosition = new();
+        public IReadOnlyList<Equipment> EquipmentInWarehousePosition => _equipmentInWarehousePosition;
+
+        public WarehousePosition(string room, string shelf, string level, string compartment, Warehouse warehouseNavigation, List<Equipment> equipmentInWarehousePosition)
+        {
+            Room = room;
+            Shelf = shelf;
+            Level = level;
+            Compartment = compartment;
+            WarehouseNavigation = warehouseNavigation;
+            _equipmentInWarehousePosition = equipmentInWarehousePosition;
+        }
     }
 }
