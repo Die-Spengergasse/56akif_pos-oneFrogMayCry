@@ -30,9 +30,10 @@ namespace Spg.Ganymed.Domain.Model
         private List<Cart> _userCarts = new();
         public IReadOnlyList<Cart> UserCarts => _userCarts;    //<---- more save
 
-        public User(int iD, Genders myProperty, string firstName, string lastName, string username, string eMail, string pwdHash, DateTime registrationDateTime, List<Cart> userCarts)
+        protected User()
+        { }
+        public User(Genders myProperty, string firstName, string lastName, string username, string eMail, string pwdHash, DateTime registrationDateTime)
         {
-            ID = iD;
             MyProperty = myProperty;
             FirstName = firstName;
             LastName = lastName;
@@ -40,7 +41,6 @@ namespace Spg.Ganymed.Domain.Model
             EMail = eMail;
             PwdHash = pwdHash;
             RegistrationDateTime = registrationDateTime;
-            _userCarts = userCarts;
         }
     }
 }

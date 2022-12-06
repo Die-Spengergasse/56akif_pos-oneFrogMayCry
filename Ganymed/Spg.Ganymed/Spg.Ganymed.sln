@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Domain", "src\Spg.Ganymed.Domain\Spg.Ganymed.Domain.csproj", "{C1302DE6-2A28-4BBD-84EB-EDE5EC82EB90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Domain", "src\Spg.Ganymed.Domain\Spg.Ganymed.Domain.csproj", "{C1302DE6-2A28-4BBD-84EB-EDE5EC82EB90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Infrastructure", "src\Spg.Ganymed.infrastructure\Spg.Ganymed.Infrastructure.csproj", "{D883A8CB-ABF7-4773-944B-9B5B4761ECC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Infrastructure", "src\Spg.Ganymed.infrastructure\Spg.Ganymed.Infrastructure.csproj", "{D883A8CB-ABF7-4773-944B-9B5B4761ECC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Application", "src\Spg.Ganymed.Application\Spg.Ganymed.Application.csproj", "{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Application", "src\Spg.Ganymed.Application\Spg.Ganymed.Application.csproj", "{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Repository", "src\Spg.Ganymed.Repository\Spg.Ganymed.Repository.csproj", "{C3DB1FED-3117-4F74-A7FD-D4610723B59D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.MvcFrontend", "src\Spg.Ganymed.MvcFrontend\Spg.Ganymed.MvcFrontend.csproj", "{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DB1FED-3117-4F74-A7FD-D4610723B59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DB1FED-3117-4F74-A7FD-D4610723B59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DB1FED-3117-4F74-A7FD-D4610723B59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DB1FED-3117-4F74-A7FD-D4610723B59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

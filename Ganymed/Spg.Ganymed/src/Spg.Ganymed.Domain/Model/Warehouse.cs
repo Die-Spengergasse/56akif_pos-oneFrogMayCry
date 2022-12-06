@@ -9,18 +9,18 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class Warehouse
     {
-        public string ID { get; } = string.Empty;
+        public int Id { get; }
 
         public string Address { get; set; } = string.Empty;
 
         private List<WarehousePosition> _warehousePositions = new();
         public IReadOnlyList<WarehousePosition> WarehousePositions => _warehousePositions;
 
-        public Warehouse(string iD, string address, List<WarehousePosition> warehousePositions)
+        protected Warehouse()
+        { }
+        public Warehouse(string address)
         {
-            ID = iD;
             Address = address;
-            _warehousePositions = warehousePositions;
         }
     }
 }

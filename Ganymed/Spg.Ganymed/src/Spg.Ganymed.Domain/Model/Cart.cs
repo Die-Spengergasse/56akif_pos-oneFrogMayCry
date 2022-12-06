@@ -10,25 +10,26 @@ namespace Spg.Ganymed.Domain.Model
 
     public class Cart
     {
-        public int Id { get; set; }
+        public int Id { get; }
 
         public int ItemCount { get; }
 
         public CartStates CartState { get; set; }
-        //muss für EntityFramework null sein, kann sonst nicht gemapped werden!
+
+        public int UserNavigationId { get; set; }
         public User UserNavigation { get; } = default!;
 
         private List<CartEntry> _cartEntries = new();
 
         public IReadOnlyList<CartEntry> CartEntries => _cartEntries;
 
-        public Cart(int id, int itemCount, CartStates cartState, User userNavigation, List<CartEntry> cartEntries)
+        protected Cart()
+        { }
+        public Cart(int itemCount, CartStates cartState, User userNavigation)
         {
-            Id = id;
             ItemCount = itemCount;
             CartState = cartState;
             UserNavigation = userNavigation;
-            _cartEntries = cartEntries;
         }
     }
 }

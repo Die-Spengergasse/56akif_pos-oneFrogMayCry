@@ -8,15 +8,17 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class EquipmentType
     {
-        public string Type { get; } = string.Empty;
+        public int Id { get; }
+        public string Type { get; set; } = string.Empty;
 
         private List<Equipment> _equipmentOfType = new();
         public IReadOnlyList<Equipment> EquipmentOfType => _equipmentOfType;
 
-        public EquipmentType(string type, List<Equipment> equipmentOfType)
+        protected EquipmentType()
+        { }
+        public EquipmentType(string type)
         {
             Type = type;
-            _equipmentOfType = equipmentOfType;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Spg.Ganymed.Domain.Model
     public class Happening
     {
         //public List<Equipment> HappeningEquipment { get; set; } = new();
-
+        public int Id { get; }
         private List<HappeningLocation> _happeningLocations = new();
         public IReadOnlyList<HappeningLocation> HappeningLocations => _happeningLocations;
 
@@ -20,10 +20,10 @@ namespace Spg.Ganymed.Domain.Model
 
         public DateTime EndTime { get; set; }
 
-        public Happening(List<HappeningLocation> happeningLocations, List<CartEntry> happeningInCartEntries, DateTime startTime, DateTime endTime) 
+        protected Happening()
+        { }
+        public Happening(DateTime startTime, DateTime endTime) 
         {
-            _happeningLocations = happeningLocations;
-            _happeningInCartEntries = happeningInCartEntries;
             StartTime = startTime;
             EndTime = endTime;
         }
