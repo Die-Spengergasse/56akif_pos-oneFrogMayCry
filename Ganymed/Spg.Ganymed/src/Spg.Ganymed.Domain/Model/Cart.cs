@@ -18,7 +18,7 @@ namespace Spg.Ganymed.Domain.Model
         //muss für EntityFramework null sein, kann sonst nicht gemapped werden!
         public User UserNavigation { get; } = default!;
 
-        public List<CartEntry> _cartEntries = new();
+        private List<CartEntry> _cartEntries = new();
 
         public IReadOnlyList<CartEntry> CartEntries => _cartEntries;
 

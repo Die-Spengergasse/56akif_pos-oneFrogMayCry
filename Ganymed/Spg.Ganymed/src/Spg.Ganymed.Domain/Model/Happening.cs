@@ -10,10 +10,10 @@ namespace Spg.Ganymed.Domain.Model
     {
         //public List<Equipment> HappeningEquipment { get; set; } = new();
 
-        public List<HappeningLocation> _happeningLocations = new();
+        private List<HappeningLocation> _happeningLocations = new();
         public IReadOnlyList<HappeningLocation> HappeningLocations => _happeningLocations;
 
-        public List<CartEntry> _happeningInCartEntries = new();
+        private List<CartEntry> _happeningInCartEntries = new();
         public IReadOnlyList<CartEntry> HapperningInCartEntries => _happeningInCartEntries;
 
         public DateTime StartTime { get; set; }

@@ -10,7 +10,7 @@ namespace Spg.Ganymed.Domain.Model
     {
         public string Type { get; } = string.Empty;
 
-        public List<Equipment> _equipmentOfType = new();
+        private List<Equipment> _equipmentOfType = new();
         public IReadOnlyList<Equipment> EquipmentOfType => _equipmentOfType;
 
         public EquipmentType(string type, List<Equipment> equipmentOfType)

@@ -8,7 +8,7 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class Equipment
     {
-        public int ID { get; set; }
+        public int ID { get; }
 
         public string Name { get; set; } = string.Empty;
 
@@ -24,7 +24,7 @@ namespace Spg.Ganymed.Domain.Model
 
         public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
 
-        public List<CartEntry> _equipmentInCartEntries = new();
+        private List<CartEntry> _equipmentInCartEntries = new();
         public IReadOnlyList<CartEntry> EquipmentInCartEntries => _equipmentInCartEntries;
 
         public Equipment(int iD, string name, string description, bool available, HappeningLocation currentHappeningLocationNavigation, EquipmentType equipmentTypeNavigation, WarehousePosition warehousePositionNavigation, List<CartEntry> equipmentInCartEntries)

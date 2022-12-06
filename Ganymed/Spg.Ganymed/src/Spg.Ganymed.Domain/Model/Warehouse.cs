@@ -13,8 +13,7 @@ namespace Spg.Ganymed.Domain.Model
 
         public string Address { get; set; } = string.Empty;
 
-        public List<WarehousePosition> _warehousePositions = new();
-
+        private List<WarehousePosition> _warehousePositions = new();
         public IReadOnlyList<WarehousePosition> WarehousePositions => _warehousePositions;
 
         public Warehouse(string iD, string address, List<WarehousePosition> warehousePositions)
