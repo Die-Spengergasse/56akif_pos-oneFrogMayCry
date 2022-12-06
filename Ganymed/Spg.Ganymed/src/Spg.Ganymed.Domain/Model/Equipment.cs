@@ -20,7 +20,7 @@ namespace Spg.Ganymed.Domain.Model
 
         public HappeningLocation CurrentHappeningLocationNavigation { get; set; } = default!;
 
-        public EquipmentType EquipmentTypeNavigation { get; set; } = default!;
+        public EquipmentType EquipmentTypeNavigation { get; } = default!;
 
         public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
 

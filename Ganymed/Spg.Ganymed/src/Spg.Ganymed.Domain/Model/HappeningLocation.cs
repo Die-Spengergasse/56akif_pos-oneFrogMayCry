@@ -8,7 +8,7 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class HappeningLocation
     {
-        public string ID { get; set; } = string.Empty;
+        public string ID { get; } = string.Empty;
 
         public string Address { get; set; } = string.Empty;
 

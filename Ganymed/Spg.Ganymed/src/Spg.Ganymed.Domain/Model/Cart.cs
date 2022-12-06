@@ -16,7 +16,7 @@ namespace Spg.Ganymed.Domain.Model
 
         public CartStates CartState { get; set; }
         //muss für EntityFramework null sein, kann sonst nicht gemapped werden!
-        public User UserNavigation { get; set; } = default!;
+        public User UserNavigation { get; } = default!;
 
         public List<CartEntry> _cartEntries = new();
 
