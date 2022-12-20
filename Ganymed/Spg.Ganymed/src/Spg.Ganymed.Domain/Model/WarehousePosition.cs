@@ -8,7 +8,7 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class WarehousePosition
     {
-        public int Id { get; }
+        public int Id { get; private set; }
         public string Room { get; set; } = string.Empty;
 
         public string Shelf { get; set; } = string.Empty;
@@ -18,7 +18,7 @@ namespace Spg.Ganymed.Domain.Model
         public string Compartment { get; set; } = string.Empty;
 
         public int WarehouseNavigationId { get; set; }
-        public Warehouse WarehouseNavigation { get; } = default!;
+        public Warehouse WarehouseNavigation { get; set; } = default!;
 
         private List<Equipment> _equipmentInWarehousePosition = new();
         public IReadOnlyList<Equipment> EquipmentInWarehousePosition => _equipmentInWarehousePosition;

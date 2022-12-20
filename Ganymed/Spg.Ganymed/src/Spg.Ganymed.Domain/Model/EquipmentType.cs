@@ -8,7 +8,6 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class EquipmentType
     {
-        public int Id { get; }
         public string Type { get; set; } = string.Empty;
 
         private List<Equipment> _equipmentOfType = new();

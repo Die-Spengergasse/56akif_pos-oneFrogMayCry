@@ -9,19 +9,21 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class CartEntry
     {
+        public int Id { get; private set; }
         public int HappeningNavigationId { get; set; }
         public Happening HappeningNavigation { get; set; } = default!;
-
-        // public Equipment EquipmentNavigation { get; set; } = default!;
+        public int EquipmentNavigationId { get; set; }
+        public Equipment EquipmentNavigation { get; set; } = default!;
         public int CartNavigationId { get; set; }
-        public Cart CartNavigation { get; } = default!;
+        public Cart CartNavigation { get; set; } = default!;
 
-        public CartEntry()
+        protected CartEntry()
         { }
-        public CartEntry(Happening happeningNavigation, Cart cartNavigation)
+        public CartEntry(Happening happeningNavigation, Cart cartNavigation, Equipment equipmentNavigation)
         {
             HappeningNavigation = happeningNavigation;
             CartNavigation = cartNavigation;
+            EquipmentNavigation = equipmentNavigation;
         }
     }
 }

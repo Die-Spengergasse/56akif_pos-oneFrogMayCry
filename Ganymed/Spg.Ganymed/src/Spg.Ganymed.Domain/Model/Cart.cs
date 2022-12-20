@@ -10,14 +10,14 @@ namespace Spg.Ganymed.Domain.Model
 
     public class Cart
     {
-        public int Id { get; }
+        public int Id { get; private set; }
 
-        public int ItemCount { get; }
+        public int ItemCount => _cartEntries.Count;
 
         public CartStates CartState { get; set; }
 
         public int UserNavigationId { get; set; }
-        public User UserNavigation { get; } = default!;
+        public User UserNavigation { get; private set; } = default!;
 
         private List<CartEntry> _cartEntries = new();
 
@@ -25,9 +25,8 @@ namespace Spg.Ganymed.Domain.Model
 
         protected Cart()
         { }
-        public Cart(int itemCount, CartStates cartState, User userNavigation)
+        public Cart(CartStates cartState, User userNavigation)
         {
-            ItemCount = itemCount;
             CartState = cartState;
             UserNavigation = userNavigation;
         }

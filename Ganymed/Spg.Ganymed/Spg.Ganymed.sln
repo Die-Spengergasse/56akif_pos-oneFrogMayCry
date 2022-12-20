@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Application", "src\Spg.Ganymed.Application\Spg.Ganymed.Application.csproj", "{E5328518-DA1A-43B0-A47B-6C2F1F4FE0C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Repository", "src\Spg.Ganymed.Repository\Spg.Ganymed.Repository.csproj", "{C3DB1FED-3117-4F74-A7FD-D4610723B59D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.Repository", "src\Spg.Ganymed.Repository\Spg.Ganymed.Repository.csproj", "{C3DB1FED-3117-4F74-A7FD-D4610723B59D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.MvcFrontend", "src\Spg.Ganymed.MvcFrontend\Spg.Ganymed.MvcFrontend.csproj", "{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.Ganymed.MvcFrontend", "src\Spg.Ganymed.MvcFrontend\Spg.Ganymed.MvcFrontend.csproj", "{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Ganymed.Domain.Test", "src\Spg.Ganymed.Domain.Test\Spg.Ganymed.Domain.Test.csproj", "{E5BF8DCD-7DBC-450C-94AB-E52BD2AC6A23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D45527A3-4A8A-4AD5-96A0-AAC3A661ADC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BF8DCD-7DBC-450C-94AB-E52BD2AC6A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BF8DCD-7DBC-450C-94AB-E52BD2AC6A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BF8DCD-7DBC-450C-94AB-E52BD2AC6A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BF8DCD-7DBC-450C-94AB-E52BD2AC6A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

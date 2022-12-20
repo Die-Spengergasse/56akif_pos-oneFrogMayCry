@@ -10,9 +10,9 @@ namespace Spg.Ganymed.Domain.Model
 
     public class User
     {
-        public int ID { get; }
+        public int Id { get; private set; }
 
-        public Genders MyProperty { get; set; }
+        public Genders Gender { get; set; }
 
         public string FirstName { get; set; } = string.Empty;
 
@@ -22,9 +22,9 @@ namespace Spg.Ganymed.Domain.Model
 
         public string EMail { get; set; } = string.Empty;
 
-        public string PwdHash { get; } = string.Empty;
+        public string PwdHash { get; private set; } = string.Empty;
 
-        public DateTime RegistrationDateTime { get; }
+        public DateTime RegistrationDateTime { get; private set; }
 
        // public List<Cart> UserCarts { get; set; } = new();     <---- not save
         private List<Cart> _userCarts = new();
@@ -32,9 +32,9 @@ namespace Spg.Ganymed.Domain.Model
 
         protected User()
         { }
-        public User(Genders myProperty, string firstName, string lastName, string username, string eMail, string pwdHash, DateTime registrationDateTime)
+        public User(Genders gender, string firstName, string lastName, string username, string eMail, string pwdHash, DateTime registrationDateTime)
         {
-            MyProperty = myProperty;
+            Gender = gender;
             FirstName = firstName;
             LastName = lastName;
             Username = username;

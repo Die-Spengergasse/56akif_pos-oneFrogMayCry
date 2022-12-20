@@ -8,7 +8,7 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class Equipment
     {
-        public int ID { get; }
+        public int Id { get; private set; }
 
         public string Name { get; set; } = string.Empty;
 
@@ -18,10 +18,10 @@ namespace Spg.Ganymed.Domain.Model
 
         //public Happening CurrentHappeningNavigation { get; set; } = default!;
         public int CurrentHappeningLocationNavigationId { get; set; }
-        public HappeningLocation CurrentHappeningLocationNavigation { get; set; } = default!;
+        public HappeningLocation? CurrentHappeningLocationNavigation { get; set; } = default!;
 
         public int EquipmentTypeNavigationId { get; set; }
-        public EquipmentType EquipmentTypeNavigation { get; } = default!;
+        public EquipmentType EquipmentTypeNavigation { get; set; } = default!;
 
         public int WarehousePositionNavigationId { get; set; }
         public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
@@ -37,6 +37,15 @@ namespace Spg.Ganymed.Domain.Model
             Description = description;
             Available = available;
             CurrentHappeningLocationNavigation = currentHappeningLocationNavigation;
+            EquipmentTypeNavigation = equipmentTypeNavigation;
+            WarehousePositionNavigation = warehousePositionNavigation;
+        }
+
+        public Equipment(string name, string description, bool available, EquipmentType equipmentTypeNavigation, WarehousePosition warehousePositionNavigation)
+        {
+            Name = name;
+            Description = description;
+            Available = available;
             EquipmentTypeNavigation = equipmentTypeNavigation;
             WarehousePositionNavigation = warehousePositionNavigation;
         }

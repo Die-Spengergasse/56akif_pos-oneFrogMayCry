@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spg.Ganymed.Domain\Spg.Ganymed.Domain.csproj" />
+    <ProjectReference Include="..\Spg.Ganymed.infrastructure\Spg.Ganymed.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

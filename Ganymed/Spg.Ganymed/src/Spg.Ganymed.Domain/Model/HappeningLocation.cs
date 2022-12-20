@@ -8,9 +8,9 @@ namespace Spg.Ganymed.Domain.Model
 {
     public class HappeningLocation
     {
-        public int Id { get; }
+        public int Id { get; private set; }
 
-        public string Address { get; set; } = string.Empty;
+        public Address? Address { get; set; }
 
         private List<Equipment> _happeningLocationEquipment = new();
         public IReadOnlyList<Equipment> HappeningLocationEquipment => _happeningLocationEquipment;
@@ -20,7 +20,7 @@ namespace Spg.Ganymed.Domain.Model
 
         protected HappeningLocation()
         { }
-        public HappeningLocation(string address)
+        public HappeningLocation(Address? address)
         {
             Address = address;
         }
