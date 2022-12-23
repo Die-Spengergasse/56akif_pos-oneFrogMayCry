@@ -17,11 +17,11 @@ namespace Spg.Ganymed.Domain.Model
         public CartStates CartState { get; set; }
 
         public int UserNavigationId { get; set; }
-        public User UserNavigation { get; private set; } = default!;
+        public virtual User UserNavigation { get; private set; } = default!;
 
         private List<CartEntry> _cartEntries = new();
 
-        public IReadOnlyList<CartEntry> CartEntries => _cartEntries;
+        public virtual IReadOnlyList<CartEntry> CartEntries => _cartEntries;
 
         protected Cart()
         { }

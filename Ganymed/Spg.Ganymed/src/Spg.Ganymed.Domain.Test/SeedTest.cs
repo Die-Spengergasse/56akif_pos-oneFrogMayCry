@@ -14,7 +14,7 @@ namespace Spg.Ganymed.Domain.Test
         [Fact]
         public void SeedDb()
         {
-            GanymedContext db = generateTestDb();
+            GanymedContext db = generateSeedDb();
             db.Seed();
         }
     }

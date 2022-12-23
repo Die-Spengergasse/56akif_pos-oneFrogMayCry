@@ -19,5 +19,15 @@ namespace Spg.Ganymed.Domain.Test
             db.Database.EnsureCreated();
             return db;
         }
+
+        protected GanymedContext generateSeedDb()
+        {
+            DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+            optionsBuilder.UseSqlite("Data Source=GanymedSeed.db");
+            GanymedContext db = new GanymedContext(optionsBuilder.Options);
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+            return db;
+        }
     }
 }

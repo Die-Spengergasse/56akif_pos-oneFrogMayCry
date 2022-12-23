@@ -28,7 +28,7 @@ namespace Spg.Ganymed.Domain.Model
 
        // public List<Cart> UserCarts { get; set; } = new();     <---- not save
         private List<Cart> _userCarts = new();
-        public IReadOnlyList<Cart> UserCarts => _userCarts;    //<---- more save
+        public virtual IReadOnlyList<Cart> UserCarts => _userCarts;    //<---- more save
 
         protected User()
         { }

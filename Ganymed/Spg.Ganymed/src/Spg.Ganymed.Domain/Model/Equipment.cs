@@ -18,16 +18,16 @@ namespace Spg.Ganymed.Domain.Model
 
         //public Happening CurrentHappeningNavigation { get; set; } = default!;
         public int CurrentHappeningLocationNavigationId { get; set; }
-        public HappeningLocation? CurrentHappeningLocationNavigation { get; set; } = default!;
+        public virtual HappeningLocation? CurrentHappeningLocationNavigation { get; set; } = default;
 
         public int EquipmentTypeNavigationId { get; set; }
-        public EquipmentType EquipmentTypeNavigation { get; set; } = default!;
+        public virtual EquipmentType EquipmentTypeNavigation { get; set; } = default!;
 
         public int WarehousePositionNavigationId { get; set; }
-        public WarehousePosition WarehousePositionNavigation { get; set; } = default!;
+        public virtual WarehousePosition WarehousePositionNavigation { get; set; } = default!;
 
         private List<CartEntry> _equipmentInCartEntries = new();
-        public IReadOnlyList<CartEntry> EquipmentInCartEntries => _equipmentInCartEntries;
+        public virtual IReadOnlyList<CartEntry> EquipmentInCartEntries => _equipmentInCartEntries;
 
         protected Equipment()
         { }

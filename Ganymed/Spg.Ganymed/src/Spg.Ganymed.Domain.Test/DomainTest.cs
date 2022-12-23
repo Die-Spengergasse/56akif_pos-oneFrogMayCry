@@ -17,7 +17,7 @@ namespace Spg.Ganymed.Domain.Test
 
             CartEntry newCartEntry = TestFixtures.createCartEntry();
 
-            ; db.Add(newCartEntry);
+            db.Add(newCartEntry);
             db.SaveChanges();
 
             Assert.Equal(1, db.CartEntries.Count());

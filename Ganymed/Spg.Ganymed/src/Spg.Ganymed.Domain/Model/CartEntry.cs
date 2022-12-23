@@ -11,11 +11,11 @@ namespace Spg.Ganymed.Domain.Model
     {
         public int Id { get; private set; }
         public int HappeningNavigationId { get; set; }
-        public Happening HappeningNavigation { get; set; } = default!;
+        public virtual Happening HappeningNavigation { get; set; } = default!;
         public int EquipmentNavigationId { get; set; }
-        public Equipment EquipmentNavigation { get; set; } = default!;
+        public virtual Equipment EquipmentNavigation { get; set; } = default!;
         public int CartNavigationId { get; set; }
-        public Cart CartNavigation { get; set; } = default!;
+        public virtual Cart CartNavigation { get; set; } = default!;
 
         protected CartEntry()
         { }

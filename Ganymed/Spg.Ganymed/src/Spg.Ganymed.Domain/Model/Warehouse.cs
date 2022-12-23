@@ -14,7 +14,7 @@ namespace Spg.Ganymed.Domain.Model
         public Address? Address { get; set; }
 
         private List<WarehousePosition> _warehousePositions = new();
-        public IReadOnlyList<WarehousePosition> WarehousePositions => _warehousePositions;
+        public virtual IReadOnlyList<WarehousePosition> WarehousePositions => _warehousePositions;
 
         protected Warehouse()
         { }

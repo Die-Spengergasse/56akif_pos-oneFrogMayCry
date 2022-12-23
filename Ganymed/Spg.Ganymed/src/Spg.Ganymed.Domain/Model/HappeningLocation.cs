@@ -13,10 +13,10 @@ namespace Spg.Ganymed.Domain.Model
         public Address? Address { get; set; }
 
         private List<Equipment> _happeningLocationEquipment = new();
-        public IReadOnlyList<Equipment> HappeningLocationEquipment => _happeningLocationEquipment;
+        public virtual IReadOnlyList<Equipment> HappeningLocationEquipment => _happeningLocationEquipment;
 
         private List<Happening> _happeningsInLocation = new();
-        public IReadOnlyList<Happening> HappeningsInLocation => _happeningsInLocation;
+        public virtual IReadOnlyList<Happening> HappeningsInLocation => _happeningsInLocation;
 
         protected HappeningLocation()
         { }

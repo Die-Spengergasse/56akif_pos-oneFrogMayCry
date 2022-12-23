@@ -11,7 +11,7 @@ namespace Spg.Ganymed.Domain.Model
         public string Type { get; set; } = string.Empty;
 
         private List<Equipment> _equipmentOfType = new();
-        public IReadOnlyList<Equipment> EquipmentOfType => _equipmentOfType;
+        public virtual IReadOnlyList<Equipment> EquipmentOfType => _equipmentOfType;
 
         protected EquipmentType()
         { }
